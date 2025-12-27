@@ -45,6 +45,7 @@ const i18n = createI18n({
       'title-default': 'Phira',
       'title-charts': 'Charts',
       'title-users': 'User',
+      'title-mpserver': 'Multiplayer Servers',
       'title-settings': 'Settings',
 
       'title-dmca': 'DMCA',
@@ -52,6 +53,7 @@ const i18n = createI18n({
       'title-privacy-policy': 'Privacy Policy',
       'title-oauth': 'OAuth',
       'title-staff': 'Staff',
+      disclaimer: 'This is an unofficial webpage, please do not report any issues to the official website.',
     },
     'zh-CN': {
       login: '登录',
@@ -71,6 +73,7 @@ const i18n = createI18n({
       'title-default': 'Phira',
       'title-charts': '谱面',
       'title-users': '用户',
+      'title-mpserver': '多人联机服务器',
       'title-settings': '设置',
 
       'title-dmca': 'DMCA',
@@ -78,6 +81,8 @@ const i18n = createI18n({
       'title-privacy-policy': '隐私政策',
       'title-oauth': 'OAuth',
       'title-staff': '团队成员',
+
+      disclaimer: '此页面不属于官方，出现问题请不要反馈给官方。',
     },
   },
   legacy: false,

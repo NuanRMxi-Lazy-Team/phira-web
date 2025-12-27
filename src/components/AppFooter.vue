@@ -7,7 +7,9 @@ en:
   contact-us: Contact Us
   staff: Staff
 
-  copyright: 'Phira 2023. All rights reserved by TeamFlos.'
+  copyright: |
+    Phira 2023. All rights reserved by TeamFlos.
+    NuanR_Star Ciallo Team 2026. All rights reserved.
 
 zh-CN:
   dmca: DMCA
@@ -17,7 +19,9 @@ zh-CN:
   contact-us: 联系我们
   staff: 团队
 
-  copyright: 'Phira 2023. TeamFlos 版权所有.'
+  copyright: |
+    Phira 2023. TeamFlos 版权所有.
+    NuanR_Star Ciallo Team 2026. 版权所有.
 
 </i18n>
 
@@ -47,7 +51,7 @@ useI18n();
       </div>
     </div>
     <div>
-      <p v-t="'copyright'"></p>
+      <p v-t="'copyright'" class="whitespace-pre-line"></p>
     </div>
   </footer>
 </template>

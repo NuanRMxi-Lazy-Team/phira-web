@@ -12,6 +12,9 @@ import ChartView from '../views/ChartView.vue';
 import UsersView from '../views/UsersView.vue';
 import UserView from '../views/UserView.vue';
 
+import MpServerView from '../views/MpServerView.vue';
+import MpServerDetailView from '../views/MpServerDetailView.vue';
+
 import SettingsView from '../views/SettingsView.vue';
 
 import OAuthView from '../views/OAuthView.vue';
@@ -39,6 +42,9 @@ const router = createRouter({
     { path: '/user', name: 'users', component: UsersView },
     { path: '/user/:id(\\d+)', name: 'user', component: UserView },
 
+    { path: '/mpserver', name: 'mpserver', component: MpServerView },
+    { path: '/mpserver/:id(\\d+)', name: 'mpserver-detail', component: MpServerDetailView },
+
     { path: '/settings', redirect: () => '/settings/account' },
     { path: '/settings/:category', name: 'settings', component: SettingsView },
 
@@ -62,8 +68,8 @@ const router = createRouter({
   },
 });
 
-import { i18n } from '../main';
-import { setTitle } from '../common';
+import { i18n } from '@/main';
+import { setTitle } from '@/common';
 
 router.afterEach((to) => {
   nextTick(() => {

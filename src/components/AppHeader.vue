@@ -5,6 +5,7 @@ en:
   chart: Charts
   event: Events
   user: Users
+  mpserver: Multiplayer Servers
 
   wip: Work in progress
 
@@ -19,6 +20,7 @@ zh-CN:
   chart: 谱面
   event: 活动
   user: 用户
+  mpserver: 多人联机服务器
 
   wip: 功能暂未开放
 
@@ -35,10 +37,8 @@ import { useRoute } from 'vue-router';
 
 import { useI18n } from 'vue-i18n';
 
-import { useFetchApi, getCookie, addCookieListener, logout, toast } from '../common';
-import type { User } from '../model';
-
-import { Toaster } from 'vue-sonner';
+import { useFetchApi, getCookie, addCookieListener, logout, toast } from '@/common';
+import type { User } from '@/model';
 
 import LoadView from './LoadView.vue';
 import UserAvatar from './UserAvatar.vue';
@@ -54,6 +54,8 @@ export default {};
 </script>
 
 <script setup lang="ts">
+import { Toaster } from 'vue-sonner';
+
 const { t } = useI18n();
 
 watch(
@@ -77,6 +79,7 @@ const NAVS = [
   { path: '/chart', icon: 'fa-book', text: 'chart', enabled: true },
   { path: '/', icon: 'fa-star', text: 'event', enabled: false },
   { path: '/user', icon: 'fa-user', text: 'user', enabled: true },
+  { path: '/mpserver', icon: 'fa-server', text: 'mpserver', enabled: true },
 ];
 
 addCookieListener(() => {
@@ -107,7 +110,6 @@ window.addEventListener('scroll', onScroll);
 onUnmounted(() => {
   window.removeEventListener('scroll', onScroll);
 });
-
 </script>
 
 <template>
@@ -116,7 +118,7 @@ onUnmounted(() => {
     <div class="drawer">
       <input id="drawer" type="checkbox" class="drawer-toggle" v-model="drawerOpened" />
       <div class="drawer-content flex flex-col">
-        <div class="w-full navbar h-16 fixed top-0 z-30 transition-all" :class="{ 'shadow-xl': !atTop, 'backdrop-blur-lg': !atTop }" >
+        <div class="w-full navbar h-16 fixed top-0 z-30 transition-all" :class="{ 'shadow-xl': !atTop, 'backdrop-blur-lg': !atTop }">
           <div class="navbar-start">
             <label for="drawer" class="btn btn-square btn-ghost md:hidden">
               <i class="fa-solid fa-bars text-xl"></i>

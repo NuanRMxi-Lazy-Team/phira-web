@@ -186,6 +186,16 @@ export type Page<T> = {
   results: T[];
 };
 
+export type Server = {
+  id: number;
+  name: string;
+  address: string;
+  roomCount: number;
+  maxUsers: number;
+  currentUsers: number;
+  uptime: number; // in seconds
+};
+
 export type User = {
   id: number;
   avatar: string;

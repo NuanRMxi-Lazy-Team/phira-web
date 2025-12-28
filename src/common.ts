@@ -3,6 +3,8 @@ import type { Router } from 'vue-router';
 
 import { toast as toastSonner } from 'vue-sonner';
 
+export const MPAPI_BASE = 'http://localhost:5287';
+
 import { SUPPORTED_LOCALES, i18n } from './main';
 import { Roles, type User } from './model';
 

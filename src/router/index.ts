@@ -43,7 +43,8 @@ const router = createRouter({
     { path: '/user/:id(\\d+)', name: 'user', component: UserView },
 
     { path: '/mpserver', name: 'mpserver', component: MpServerView },
-    { path: '/mpserver/:id(\\d+)', name: 'mpserver-detail', component: MpServerDetailView },
+    { path: '/mpserver/:id', name: 'mpserver-detail', component: MpServerDetailView }, // 服务器名称作为标识符，可能是字符串
+    { path: '/mpserver/:serverName/room/:roomId', name: 'room-detail', component: () => import('../views/RoomDetailView.vue') }, // 房间详情页
 
     { path: '/settings', redirect: () => '/settings/account' },
     { path: '/settings/:category', name: 'settings', component: SettingsView },

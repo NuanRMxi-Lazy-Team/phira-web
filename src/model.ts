@@ -187,8 +187,8 @@ export type Page<T> = {
 };
 
 export type Server = {
-  id: number;
-  name: string;
+  id: number; // 保留原始ID字段，但可能不使用
+  name: string; // 服务器名称，用作主要标识符
   address: string;
   roomCount: number;
   maxUsers: number;
